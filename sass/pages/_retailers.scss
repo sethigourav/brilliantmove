@@ -1,0 +1,120 @@
+.retailers_page{	
+	.partnership{
+		padding: 50px 0;
+		.img{
+			margin-bottom: 20px;
+			img{
+				width: 97px; height: auto;
+			}
+		}
+		.content{
+			max-width: 570px;margin: 0 auto;margin-top: 20px;
+			p{
+				line-height: 28px;margin-bottom: 20px;
+				&.font-bold{
+					color: $blue;letter-spacing: 1px;
+				}
+			}
+			.btn{
+				border-radius: 40px;
+			}
+		}		
+		@include media-breakpoint-down (md){
+			padding: 30px 0;
+			.content{
+				margin-top: 10px;
+				p{
+					line-height: 24px;
+				}
+			}
+		}
+		
+	}
+	.experience_sec{
+		padding: 100px 0;
+		.text{
+			.common_heading {
+				h4{
+					margin-bottom: 30px;
+				}
+			}
+			p{
+				color: #484848;
+				font-size: 14px;
+				line-height: 27px;
+			}
+		}
+		@media(max-width:1440px){
+			padding: 80px 0;
+		}
+		@include media-breakpoint-down (lg){
+			padding: 50px 0;
+		}
+		@include media-breakpoint-down (sm){
+			padding: 35px 0 30px;
+			text-align: center;
+			.img{
+				margin-bottom: 15px;
+			}
+			.text{
+				.common_heading {
+					h4{
+						margin-bottom: 10px;
+					}
+				}
+				p{
+					line-height: 23px;
+				}
+			}
+		}
+	}
+	.setDemo_sec{	
+		padding: 85px 0;
+		background: rgb(18,4,83);
+        background: -moz-linear-gradient(left, rgba(18,4,83,1) 0%, rgba(0,93,170,1) 100%);
+        background: -webkit-linear-gradient(left, rgba(18,4,83,1) 0%,rgba(0,93,170,1) 100%);
+        background: linear-gradient(to right, rgba(18,4,83,1) 0%,rgba(0,93,170,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#120453', endColorstr='#005daa',GradientType=1 );
+        h2{
+        	color: $white;
+        	font-size: 41px;
+        	margin-bottom: 30px;
+        }
+        .btn {
+        	&.btn-outline-warning{
+        		padding-top: 8px;
+        		padding-bottom: 8px;
+        		min-width: 212px;
+        	}
+        }
+        @media(max-width:1440px){
+			padding: 65px 0;
+		}
+		@include media-breakpoint-down(md) {
+			h2{
+				font-size: 32px;
+				margin-bottom: 20px;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			padding: 30px 0;
+			h2{
+				font-size: 28px;
+				margin-bottom: 15px;
+			}
+			.form_sec{
+				margin-top: 20px;
+			}
+			.btn {
+	        	&.btn-outline-warning{
+	        		min-width: 140px;
+	        	}
+	        }
+		}
+		@include media-breakpoint-down(sm) {
+			h2{
+				font-size: 24px;
+			}
+		}
+	}
+}

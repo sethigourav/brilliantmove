@@ -1,0 +1,92 @@
+// colors
+$white		 	    : #ffffff;
+$orange         : #f69323;
+$light-green    : #46bd9f;
+$light-blue     : #2ca7d0;
+$light-gray-bg  : #f0eff9;
+$green          : #60bb46;
+$light-gray     : #787878;
+$black          : #000000;
+$light-black    : #2c2c43; 
+
+// link
+$imageurl       :  "../images";
+$fonturl        :  "../fonts";
+
+
+// font
+$font-Roboto-Regular   :  'RobotoSlab-Regular';
+$font-Roboto-Light     :  'RobotoSlab-Light';
+$font-Roboto-Thin      :  'RobotoSlab-Thin';
+$font-Roboto-Bold      :  'RobotoSlab-Bold';
+$font-Quicksand-Reg    :  'Quicksand-Regular';
+$font-Quicksand-Med    :  'Quicksand-Medium';
+$font-Quicksand-Light  :  'Quicksand-Light';
+$font-Quicksand-Bold   :  'Quicksand-Bold';
+
+
+// Breakpoints
+$grid-breakpoints: (
+xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px
+) !default;
+
+
+@font-face {
+  font-family: 'RobotoSlab-Regular';
+  src: url('#{$fonturl}/RobotoSlab-Regular.eot?#iefix') format('embedded-opentype'),  url('#{$fonturl}/RobotoSlab-Regular.woff') format('woff'), url('#{$fonturl}/RobotoSlab-Regular.ttf')  format('truetype'), url('#{$fonturl}/RobotoSlab-Regular.svg#RobotoSlab-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoSlab-Light';
+  src: url('#{$fonturl}/RobotoSlab-Light.eot?#iefix') format('embedded-opentype'),  url('#{$fonturl}/RobotoSlab-Light.woff') format('woff'), url('#{$fonturl}/RobotoSlab-Light.ttf')  format('truetype'), url('#{$fonturl}/RobotoSlab-Light.svg#RobotoSlab-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoSlab-Thin';
+  src: url('#{$fonturl}/RobotoSlab-Thin.eot?#iefix') format('embedded-opentype'),  url('#{$fonturl}/RobotoSlab-Thin.woff') format('woff'), url('#{$fonturl}/RobotoSlab-Thin.ttf')  format('truetype'), url('#{$fonturl}/RobotoSlab-Thin.svg#RobotoSlab-Thin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoSlab-Bold';
+  src: url('#{$fonturl}/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),  url('#{$fonturl}/RobotoSlab-Bold.woff') format('woff'), url('#{$fonturl}/RobotoSlab-Bold.ttf')  format('truetype'), url('#{$fonturl}/RobotoSlab-Bold.svg#RobotoSlab-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand-Regular';
+  src: url('#{$fonturl}/Quicksand-Regular.eot?#iefix') format('embedded-opentype'),  url('#{$fonturl}/Quicksand-Regular.woff') format('woff'), url('#{$fonturl}/Quicksand-Regular.ttf')  format('truetype'), url('#{$fonturl}/Quicksand-Regular.svg#Quicksand-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand-Medium';
+  src: url('#{$fonturl}/Quicksand-Medium.eot?#iefix') format('embedded-opentype'),  url('#{$fonturl}/Quicksand-Medium.woff') format('woff'), url('#{$fonturl}/Quicksand-Medium.ttf')  format('truetype'), url('#{$fonturl}/Quicksand-Medium.svg#Quicksand-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand-Light';
+  src: url('#{$fonturl}/Quicksand-Light.eot?#iefix') format('embedded-opentype'),  url('#{$fonturl}/Quicksand-Light.woff') format('woff'), url('#{$fonturl}/Quicksand-Light.ttf')  format('truetype'), url('#{$fonturl}/Quicksand-Light.svg#Quicksand-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand-Bold';
+  src: url('#{$fonturl}/Quicksand-Bold.eot?#iefix') format('embedded-opentype'),  url('#{$fonturl}/Quicksand-Bold.woff') format('woff'), url('#{$fonturl}/Quicksand-Bold.ttf')  format('truetype'), url('#{$fonturl}/Quicksand-Bold.svg#Quicksand-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,27 @@
+@import 'variables/variables';
+@import '../mixins/mixins.scss'; 
+@import '../mixins/breakpoints.scss'; 
+@import 'helper/helper';
+@import '../partner/helper/loader';
+
+// common
+@import '../partner/common/header.scss';
+@import '../partner/common/sidemenu.scss';
+
+// pages
+@import 'pages/common-admin.scss';
+@import 'pages/login.scss';
+@import 'pages/dashboard.scss';
+@import 'pages/price.scss';
+@import 'pages/extra-service.scss';
+@import 'pages/vehicles.scss';
+@import 'pages/setting.scss';
+@import 'pages/payment-history.scss';
+@import 'pages/my-profile.scss';
+@import 'pages/driver-info.scss';
+@import 'pages/my-profile.scss';
+@import 'pages/promotion.scss';
+@import 'pages/feedback.scss';
+@import 'pages/order-history-details.scss';
+@import 'pages/complaint-details.scss';
+@import 'pages/store.scss';

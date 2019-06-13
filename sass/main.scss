@@ -1,0 +1,18 @@
+@import 'mixins/breakpoints';
+@import 'mixins/mixins';
+@import 'variables/variables';
+@import 'helper/helper';
+@import 'helper/loader';
+
+//pages
+@import 'pages/header';
+@import 'pages/footer';
+@import 'pages/common';
+@import 'pages/homepage';
+@import 'pages/driver';
+@import 'pages/error';
+@import 'pages/get-quote';
+@import 'pages/about-us';
+@import 'pages/retailers';
+@import 'pages/modal/modal';
+@import 'pages/faq';

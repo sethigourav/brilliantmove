@@ -1,0 +1,68 @@
+
+.vehicles-page {
+    .page-content {
+        .custom_card{
+            .extra-ser{
+                .form-group{
+                    .col-form-label{
+                        line-height: 1.7;padding-right:0px;font-family:$font-Quicksand-Reg;color:#212121;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .services-sectable{
+                .table{
+                    
+                    thead{
+                        tr{
+                            th{
+                                padding-top: 2px;vertical-align: top;
+                                ul{
+                                    margin-top: 10px;margin-bottom:0px;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                ul.area{
+                                    li{
+                                        vertical-align: middle;margin-right:0px;
+                                        &:not(:last-child){
+                                            margin-right: 50px;
+                                        }
+                                    }
+                                }
+                                ul{
+                                    li{
+                                        vertical-align: middle;margin-right:0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .uploadimg{
+                .file{
+                    visibility: hidden;
+                    position: absolute;left:0;
+                }
+                .imgpreview{
+                    background-color: transparent;
+                    border-radius: 0;padding:4px 5px;width:50px;
+                    img{
+                        max-width: 22px; max-height: 22px; margin:0 auto;
+                    }
+                }
+                .form-control{
+                    background-color: $white;
+                }
+                .btn-primary{
+                    font-family:$font-Quicksand-Med;font-size:15px;
+                }
+            }
+        }
+    }
+}

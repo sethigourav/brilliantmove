@@ -1,0 +1,299 @@
+.get-quote-page{
+	.quote-wraper {
+    	padding: 40px 30px;box-shadow: 0px 4px 14px rgba(0,0,0,0.1);border-radius: 8px;
+    	.quate-snippet{
+    		position: relative;
+    		.form-control{
+    			padding-right: 36px;
+    		}
+    		.btn-number {
+   				position: absolute;right: 0;top: 0;background: transparent;border: 0;border-left: 1px solid $blue;
+   				height: 28px;padding: 0;width: 35px;text-align: center;line-height: 31px;cursor: pointer; color: $blue;
+   				&.btn-minuse{
+   					top: auto;bottom: 0; border-top: 1px solid $blue	
+   				}
+			}
+		}
+		.form-group{
+				.form-control{
+					&.date-picker{
+	    				background-image: url(../images/calendar.png);background-repeat: no-repeat;background-position: calc(100% - 15px) center;
+					}
+					&.time-picker{
+						background-image: url(../images/down-arrow.png);background-repeat: no-repeat;background-position: calc(100% - 15px) center;
+					}
+	    		}
+			}
+	}
+
+	.quote-right{
+		.quote-right-body{
+			padding: 40px 30px;
+			.quote-list {
+		    	position: relative;padding-left: 60px; color: $light-gray; font-size: 15px;  padding-top: 5px;
+		    	.quote-list-icon {
+		    		position: absolute;left: 0;height: 50px;width: 50px;border: 1px solid #EBEBEB;line-height: 42px;text-align: center;
+		    		border-radius:4px;
+				}
+				span{
+					display: block; color: $blue; font-family:  $font-worksemibold; font-size: 14px; margin-top: 5px;
+				}
+				a{
+					font-size: 10px;color: #EF5A16;margin-left: 10px; font-family: $font-workreg;
+				}
+				&:not(:last-child){
+					margin-bottom: 25px;
+				}
+			}
+		}
+		.quote-right-bottom{
+			padding: 20px 30px;border-top: 1px solid rgba(112,112,112,0.14);
+			h4{
+				color: $light-gray; font-family:$font-workmedium;font-size: 20px;
+			}
+			span{
+				font-size: 22px; color: #1B212E; font-family: $font-worksemibold;
+			}
+		}
+	}
+	.wrap{
+		padding: 40px 0;
+		.back{
+			a{
+				color: #484848;font-size: 16px;transition: all 0.5s;
+				i{
+					color: $blue;font-size: 25px;margin-right: 10px;
+				}
+				&:hover{
+					color: $blue;
+				}
+			}
+		}
+		.quote-form{
+			margin-top: 70px;
+			.heading{
+				h1{
+					color: $blue;font-size: 36px;font-family:$font-worksemibold ;
+				}
+			}
+			.location{
+				position: relative;
+				&:before{
+					height: 14px;width: 14px;border-radius: 50%;content: '';position: absolute;left: 25px;top: 20px;
+				}
+				&.start{
+					&:before{
+						background-color: #005DAA;
+					}
+				}
+				&.end{
+					&:before{
+						background-color: $orange;
+					}
+				}
+				.form-control{
+					padding-left: 60px;
+				}
+			}
+			
+			.add-item{
+				position: relative;
+				a{
+					position: absolute;top: 20px;left: 25px;color: #707070;transition: all 0.5s;
+					&:hover{
+						color: $blue;
+					}
+				}
+				.form-control{
+					padding-left: 60px;
+				}
+			}
+			.btn{
+				margin-top: 20px;
+			}
+		}
+	}
+	@include media-breakpoint-down (lg){
+		.wrap{
+			.quote-form{
+				margin-top: 50px;
+				.heading{
+					h1{
+						font-size: 30px;
+					}
+				}
+			}
+		}
+		
+	}
+	@include media-breakpoint-down (md){
+		.wrap{
+			.back {
+				a{
+					i{
+						font-size: 20px;margin-right: 5px;
+					}
+				}
+			}
+			.quote-form{
+				margin-top: 35px;
+				.heading{
+					h1{
+						font-size: 26px;
+					}
+				}
+				.btn{
+					margin-top: 10px;
+				}
+				.add-item{
+					a {
+   						top: 17px;left: 15px;
+					}
+					 .form-control {
+	    				padding-left: 50px;
+					}
+				}
+			}
+		}
+		.quote-wraper {
+	    	padding: 30px 20px;
+	    	&.quote-right{
+				.quote-right-body{
+					padding: 30px 20px;
+					.quate-snippet{
+			    		.btn-number {
+			   				height: 25px;
+						}
+					}
+
+					.quote-list {
+			    		position: relative;padding-left: 50px;
+			    		span{
+						   	font-size: 13px;
+						}
+				    	.quote-list-icon {
+				    		height: 40px;width: 40px;line-height: 35px;
+						}
+						&:not(:last-child){
+							margin-bottom: 20px;
+						}
+					}
+				}
+				.quote-right-bottom{
+					padding: 20px 15px;
+					h4{
+						font-size: 18px;
+					}
+					span{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down (sm){
+		.wrap{
+			padding:20px 0;
+			.back {
+				a{
+					i{
+						font-size: 15px;margin-right: 5px;
+					}
+				}
+			}
+			.quote-form{
+				margin-top: 25px;
+				.heading{
+					h1{
+						font-size: 20px;
+					}
+				}
+				.btn{
+					margin-top: 0px;
+				}
+				.add-item{
+					a {
+   						top: 14px;left: 15px;
+					}
+					 .form-control {
+	    				padding-left: 40px;
+					}
+				}
+			}
+		}
+		.quote-wraper{
+			padding:25px 15px;
+			&.quote-right{
+				margin-top: 30px;
+				.quote-right-body{
+					padding:25px 15px;
+					.quote-list {
+			   			font-size: 14px;
+			   			span{
+			   				font-size: 12px; margin-top: 2px;
+			   			}
+			   			&:not(:last-child){
+							margin-bottom: 10px;
+						}
+					}
+					.quate-snippet{
+			    		.btn-number {
+			   				height: 23px;
+						}
+					}
+					.form-group {
+						.form-control{
+							&.date-picker{
+								background-size: 20px;
+							}
+							&.time-picker{
+								background-size: 14px;
+							}
+						}
+					}
+				}
+				.quote-right-bottom{
+					padding: 15px;
+					h4{
+						font-size: 16px;
+					}
+					span{
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down (xs){
+		.wrap{
+			.quote-form{
+				margin-top: 15px;
+			}
+		}
+	}
+	
+}
+.product-label{
+ 	ul{
+		li {
+	    	background: #F2F2F2; margin-right: 20px !important; padding: 10px 15px;position: relative;color: #1B212E; font-size: 14px; font-family: $font-worksemibold ;
+	    	a{
+	    		position: absolute;height: 20px;width: 20px;background: #F2F2F2;font-size: 10px;text-align: center;line-height: 15px;border-radius: 50%;right: -7px;top: -9px;color: #120453;line-height: 23px;
+	    	}
+		}
+	}
+	@include media-breakpoint-down (md){
+		ul{
+			li {
+				margin-right: 10px !important; padding: 8px 10px; font-size: 13px;
+			}
+		}
+	}
+	@include media-breakpoint-down (sm){
+		ul{
+			li {
+			 font-size: 12px; margin-bottom: 15px; 
+			}
+		}
+	}
+}

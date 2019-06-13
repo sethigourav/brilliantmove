@@ -1,0 +1,102 @@
+.feedback-page {
+    .page-content {
+        .custom_card{
+            .extra-ser{
+                @media(max-width:1280px){
+                    .pl0{
+                        padding-left:0px;
+                    }
+                }
+                @include media-breakpoint-down(lg){
+                    .pl0{
+                        padding-left:15px;
+                    }
+                }
+                .form-group{
+                    .col-form-label{
+                        line-height: 1.9;
+                    }
+                    @include media-breakpoint-only(md){
+                        margin-bottom: 0px;
+                    }
+                }
+                .checkbox_custom{
+                    margin-top: 10px;
+                    @media(min-width:1200px) and (max-width:1680px){
+                        .form-check-inline{
+                            &:not(:last-child){
+                                margin: 0px 13px 0 0;
+                            }
+                            .custom-control{
+                                font-size: 17px;padding:0 1.7rem 0 0;
+                            }
+                        }
+                    }
+                    @include media-breakpoint-between(md,lg){
+                        .form-check-inline{
+                            &:not(:last-child){
+                                margin: 0px 20px 0 0;
+                            }
+                            .custom-control{
+                                padding: 0 22px 0 00;font-size: 16px;
+                                .custom-control-indicator{
+                                    height: 16px;width: 16px;top: 4px;
+                                }
+                            }
+                        }
+                    }
+                    @include media-breakpoint-down(sm){
+                        margin-top: 0px;margin-bottom: 15px;
+                        .form-check-inline{
+                            &:not(:last-child){
+                                margin: 0px 15px 0 0;
+                            }
+                            .custom-control{
+                                padding: 0 22px 0 00;font-size: 16px;
+                                .custom-control-indicator{
+                                    height: 16px;width: 16px;top: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .filterbtn{
+                    min-width: 95px;
+                }
+            }
+
+            .feedback-tbl{
+                .table{
+                    thead{
+                        tr{
+                            th{
+                                padding-top: 2px;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                white-space: nowrap;
+                                ul{
+                                    li{
+                                        vertical-align: middle;margin-right:0px;
+                                        &:not(:last-child){
+                                            margin-right: 50px;
+                                        }
+                                        a.btn-outline-success{
+                                            color: $light-green;
+                                            &:hover{
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

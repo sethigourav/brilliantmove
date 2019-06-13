@@ -1,0 +1,214 @@
+.orange{color:$orange !important;}
+.white{color:$white !important;}
+.light-green{color:$light-green !important;}
+.light-blue{color:$light-blue !important;}
+.bg-gray{background-color:$light-gray-bg !important;}
+.green{color: $green !important}
+.black{color: $black !important}
+.light-gray{color: $light-gray !important;}
+.mt-10{margin-top:10px !important;}
+.mt-20{margin-top:20px !important;}
+.mt-30{margin-top:30px !important;}
+.mb-10{margin-bottom:10px !important;}
+.mb-20{margin-bottom:20px !important;}
+.mb-30{margin-bottom:30px !important;}
+.mb-40{margin-bottom:40px !important;}
+.mb-50{margin-bottom:50px !important;}
+.mb-5{margin-bottom:5px !important;}
+.pb-10{padding-bottom:10px !important;}
+.pb-20{padding-bottom:20px !important;}
+.pb-30{padding-bottom:30px !important;}
+.pb-40{padding-bottom:40px !important;}
+.pb-50{padding-bottom:50px !important;}
+.font-bold{font-family: $font-workbold;}
+.font-light{font-family: $font-worklight;}
+.font-semi{font-family: $font-worksemibold;}
+.font-med{font-family: $font-workmedium;}
+
+body{
+    font-size:15px;font-family: $font-workreg;
+    @include media-breakpoint-down(xs) { 
+        font-size: 14px;
+    }
+}
+
+a{
+    &:hover{
+        text-decoration: none; 
+    }
+}
+a, button{
+    &:focus{
+        outline: none !important; box-shadow: none !important;
+    }
+}
+:focus{
+    outline: none !important; box-shadow: none !important;
+}
+
+
+.container{   
+	@include media-breakpoint-down(sm){
+		max-width: 100%;
+	}
+    @media(min-width: 1200px) {       
+        max-width: 1170px;
+    }
+      @media(min-width: 1440px) {       
+        max-width:1200px;
+    }
+	
+	
+}
+
+// common btn
+.btn{ 
+    &.btn:not(:disabled):not(.disabled){
+        cursor: pointer;
+    }
+    &.btn-primary{
+        border-color: $white;color: $orange;background-color: $white; border-radius: 0;
+        &:hover,&:focus,&:active,&:not(:disabled):not(.disabled):active {
+            border-color: $orange;color: $white;background-color: $orange;
+        }
+    }
+	&.btn-outline-warning{
+        border-color: $orange;color: $orange;border-radius: 10px;border-width: 3px;font-family: $font-workmedium;font-size: 21px;    padding: 10px 30px;transition: all 0.5s;
+		&:hover,&:focus,&:active,&:not(:disabled):not(.disabled):active {
+            border-color: $orange;color: $white;background-color: $orange;  
+        }
+        &.outline-blue{
+            border-color: $blue; color: $blue;
+            &:hover{
+                color: $white;background-color: $blue;  
+            }
+        }
+    }
+	&.btn-secondary{
+		border-color: $orange;color: $white;border-radius: 10px;border-width: 3px;font-family: $font-workmedium;font-size: 21px;    padding: 10px 30px;transition: all 0.5s;
+		background: $orange;
+		 &:hover,&:focus,&:active,&:not(:disabled):not(.disabled):active {
+			border-color:darken($orange, 5%);
+			outline: none;box-shadow: none;background: darken($orange, 5%);
+		}
+	}
+	
+	@include media-breakpoint-down (md){
+		&.btn-outline-warning{
+			border-width: 1px;font-size: 16px;padding: 5px 20px;
+		}
+        &.btn-secondary{
+            border-width: 1px;font-size: 16px;padding: 5px 20px;
+        }
+	}
+}
+
+.form-group{
+	margin-bottom: 20px;
+	.form-control{
+		border-radius: 8px;border:1px solid $blue;height: 56px;background-color: #E6EFF7;color: #484848;font-family: $font-workmedium;
+		font-size: 16px;
+        @include media-breakpoint-down(md){
+            height: 50px;font-size: 15px;
+        }
+        @include media-breakpoint-down(sm){
+            height: 45px;font-size: 14px;
+        }
+	}
+    textarea.form-control{
+        height: auto;
+        resize: none;
+    }
+}
+
+/* Switch
+   ========================================================================== */
+.switch,
+.switch * {
+    -webkit-tap-highlight-color: transparent;user-select: none;
+}
+
+.switch label {
+    cursor: pointer;margin: 0px;
+    font-size: 16px; color: $blue; font-family: $font-Quicksand-Med ;
+    @include media-breakpoint-down(md){
+        font-size: 13px;
+    }
+}
+
+.switch label input[type=checkbox] {
+    opacity: 0;width: 0;height: 0;
+    +.lever{
+        &:after{
+            animation: switch-shadow 0.4s;
+        }    
+    }
+
+    &:checked+.lever {
+        background-color:$orange;
+        &:before,
+            &:after {
+            left: 23px;
+        }
+        &:after {
+            background-color:$white ;animation: switch-shadow-color 0.4s;
+        }
+        @include media-breakpoint-down(md){
+            &:before,
+                &:after {
+                left: 18px;
+            }
+        }
+    }
+}
+
+.switch label .lever {
+    content: "";display: inline-block;position: relative;width:40px;height:20px;background-color:#cbcbcb;
+    border-radius: 15px;transition: background 0.3s ease;vertical-align: middle;
+    &:before,&:after {
+        content: "";position:absolute;display:inline-block;width:15px;height:15px;
+        border-radius:50%;left:3px;top:50%;transform:translateY(-50%);
+        transition:left 0.3s ease, background .3s ease, box-shadow 0.1s ease, transform .1s ease;
+
+    }
+    &:after {
+        background-color:$white;
+
+    }
+    @include media-breakpoint-down(md){
+        width: 35px;
+    }
+}
+
+// Switch active style
+input[type=checkbox]:checked:not(:disabled)~.lever:active::before,
+input[type=checkbox]:checked:not(:disabled).tabbed:focus~.lever::before {
+    background-color: $white;
+}
+
+input[type=checkbox]:not(:disabled)~.lever:active:before,
+input[type=checkbox]:not(:disabled).tabbed:focus~.lever::before {
+    background-color: rgba(0, 0, 0, .08);
+}
+@keyframes switch-shadow-color {
+  0% { box-shadow: 0 0 0 0 rgba(102,103,107,0.6); }
+  100% { box-shadow: 0 0 0px 10px rgba(0,0,0,0); }
+}
+@keyframes switch-shadow {
+  0% { box-shadow: 0 0 0 0 rgba(0,0,0,0.3); }
+  100% { box-shadow: 0 0 0px 10px rgba(0,0,0,0); }
+}
+
+//datepicker
+.datepicker{
+    table{
+        tr{
+            td{
+                padding: 8px;
+                &.active,&:focus{
+                    background: $orange !important; color: $white;
+                }
+            }
+        }
+    }
+}

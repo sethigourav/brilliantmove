@@ -1,0 +1,242 @@
+.header {
+    padding: 15px 0px;
+    background-color: $white; @include box-shadow(0,2px,10px, rgba(31,39,49,0.05));
+
+    .logo img {
+        max-width: 240px;
+    }
+
+    .navbar {
+        .navbar-collapse {
+            .navbar-nav {
+                li {
+                    a {
+                        color: #606060;
+                        text-transform: uppercase;
+                        font-size: 12px;                   
+                        font-family: $font-workbold;
+                        @include transition(all ease-in 0.2s);
+                        padding: 10px 15px;                      
+
+                        &:hover,
+                        &:focus,
+                        &.active {
+                           
+                            color: $orange;
+                        }
+
+                    }
+
+                }
+
+                &.navbar_btn {
+                    margin-right: 50px;
+                    li {
+                        a {
+                            color: $orange;
+                            border: 1px solid $orange;                                                                               
+                            text-align: center;
+                            min-width: 150px;
+                            margin-left: 30px;
+                            border-radius: 30px;
+                            &:hover,
+                            &:focus
+                                {                              
+                                color: $white;
+                                 background-color: $orange;
+                            }
+                            &.app_down{
+                                color: $white;
+                                background-color: $orange;
+                                min-width: 190px;
+                                &:hover,
+                                &:focus
+                                    {                              
+                                    color: $orange;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1440px) {
+        padding: 13px 0;
+        .navbar {
+            .navbar-collapse {
+                .navbar-nav {
+                    &.navbar_btn {
+                    margin-right: 40px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media(min-width: 1200px) and (max-width: 1399px) {
+        .navbar {
+            .navbar-brand {
+                .logo {
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+
+            .navbar-collapse {
+           
+
+            }
+        }
+    }
+
+    @include media-breakpoint-only(lg) {
+        .navbar {
+            padding: 0;
+            .navbar-brand {
+                .logo {
+                    img {
+                        width: 140px;
+                    }
+                }
+            }
+            .navbar-collapse {
+                .navbar-nav {
+                    &.navbar_btn {
+                    margin-right: 25px;
+                        li{
+                            a{
+                                margin-left: 20px;
+                                padding: 6px 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-only(md) {  
+        .container{
+            max-width: 100%;
+        }  
+
+        .navbar {           
+
+            .navbar-brand {
+                .logo {
+                    img {
+                        width: 115px;
+                    }
+                }
+            }
+
+            .navbar-collapse {
+                .navbar-nav {
+                    li{
+                        a{
+                            padding: 5px 9px;
+                        }
+                    }
+                    &.navbar_btn {
+                    margin-right: 10px;
+                        li{
+                            a{
+                                margin-left: 10px;
+                                min-width: 135px !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        position: relative;
+        padding: 10px 0px;
+
+        .navbar {
+            padding: 0;
+
+            .navbar-toggler {
+                border: none; padding-right: 0;
+            }
+
+            .navbar-brand {
+                .logo {
+                    img {
+                        width: 120px;
+                    }
+                }
+            }
+
+            .collapse {
+                width: 100%;
+            }
+
+            .navbar-collapse {
+                padding-bottom: 0px;
+                .navbar-nav {
+                    &.navbar_btn {
+                    margin-right: 0; margin-top: 10px;
+                    text-align: center;
+                    flex-direction: row;
+                        li{
+                            a{
+                                margin-left: 0;
+                                margin-right: 2px;
+                                min-width: 140px;
+                                margin-bottom: 5px;
+                                padding: 5px 10px;
+                                &.app_down{
+                                    min-width: 140px;
+                                }
+                            }
+                        }
+                    }
+                    li {
+                        a {
+                            &.active {
+                                span {
+                                    color: $orange;
+                                    background-color: transparent;
+                                }
+                            }
+                            span {
+                                padding: 0px;
+                                border-radius: 0;
+
+                                &:hover,
+                                &:focus {
+                                    background-color: transparent;
+                                    color: $orange;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        .navbar {
+            .navbar-collapse {
+                .navbar-nav {
+                    li{
+                        a{padding: 5px;}
+                    }
+                }
+            }
+        }
+    }
+}

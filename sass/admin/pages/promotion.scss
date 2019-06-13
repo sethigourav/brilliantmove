@@ -1,0 +1,53 @@
+.promotion-page {
+    .page-content {
+        .custom_card{
+            .extra-ser{
+                .form-group{
+                    .col-form-label{
+                        line-height: 1.7;
+                    }
+                    .or{
+                        font-family:$font-Quicksand-Med;color:#212121;text-transform:uppercase;
+                        text-align: center;
+                        @include media-breakpoint-down(lg) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                // .filterbtn{
+                //     font-family: $font-Roboto-Bold;font-size:22px;padding:0 15px;height:57px;min-width:227px; 
+                // }
+            }
+
+            .services-sectable{
+                .table{
+                    thead{
+                        tr{
+                            th{
+                                padding-top: 2px;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                white-space: nowrap;
+                                ul{
+                                    li{
+                                        vertical-align: middle;
+                                        a.btn-outline-success{
+                                            color: $light-green;
+                                            &:hover{
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

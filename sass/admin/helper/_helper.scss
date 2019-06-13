@@ -1,0 +1,211 @@
+.orange{color:$orange !important;}
+.white{color:$white !important;}
+.light-green{color:$light-green !important;}
+.light-blue{color:$light-blue !important;}
+.bg-gray{background-color:$light-gray-bg !important;}
+.green{color: $green !important}
+.black{color: $black !important}
+.light-gray{color: $light-gray !important;}
+.mt-10{margin-top:10px !important;}
+.mt-20{margin-top:20px !important;}
+.mt-30{margin-top:30px !important;}
+.mb-10{margin-bottom:10px !important;}
+.mb-20{margin-bottom:20px !important;}
+.mb-30{margin-bottom:30px !important;}
+.mb-40{margin-bottom:40px !important;}
+.mb-50{margin-bottom:50px !important;}
+.mb-5{margin-bottom:5px !important;}
+.pb-10{padding-bottom:10px !important;}
+.pb-20{padding-bottom:20px !important;}
+.pb-30{padding-bottom:30px !important;}
+.pb-40{padding-bottom:40px !important;}
+.pb-50{padding-bottom:50px !important;}
+
+body{
+    font-size:15px;font-family: $font-Quicksand-Reg;
+    @include media-breakpoint-down(xs) { 
+        font-size: 14px;
+    }
+}
+
+.col-xs-full{
+    @include media-breakpoint-down(xs) { 
+        -ms-flex: 0 0 50%; 
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @media(max-width:360px){
+        max-width:100%; 
+        -ms-flex: 0 0 100%; 
+        flex: 0 0 100%;
+    }
+}
+
+a{
+    &:hover{
+        text-decoration: none; 
+    }
+}
+a, button{
+    &:focus{
+        outline: none !important; box-shadow: none !important;
+    }
+}
+
+:focus{
+    outline: none !important; box-shadow: none !important;
+}
+:focus {
+    outline: -webkit-focus-ring-color none;
+}
+
+@media (min-width: 1400px){
+    .container {
+        max-width:1400px;
+    }
+}
+@media(min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width:1200px;
+    }
+}
+
+.btn{
+    cursor:pointer;
+}
+.btn-primary{
+    background-color:$green;border-color:$green;border-radius:0;font-family: $font-Quicksand-Med;
+    color:$white;position:relative;text-transform:uppercase;font-size: 15px;
+    letter-spacing:1px;
+    &:hover,&:active,&:focus,&.active,&.focus,&.active:focus,&.active:hover,&.focus:active,&:active:focus,&:active:hover{
+        background-color:lighten($green, 10%);border-color:lighten($green, 10%);
+        box-shadow:none;
+    }
+    @include media-breakpoint-down(sm){
+        font-size:14px !important;
+    }
+}
+.btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+    background-color:lighten($green, 10%);border-color:lighten($green, 10%);
+    box-shadow:none; 
+}
+
+.btn-warning{
+    background-color:$orange;border-color:$orange;min-width: 110px;font-size: 15px;
+    font-family:$font-Quicksand-Med;color:$white;position:relative;text-transform:uppercase;
+    letter-spacing:1px;
+    &:hover,&:active,&:focus,&.active,&.focus,&.active:focus,&.active:hover,&.focus:active,&:active:focus,&:active:hover{
+        background-color:lighten($orange, 10%);border-color:lighten($orange, 10%);
+        box-shadow:none;color:$white;
+    }
+    @include media-breakpoint-down(sm){
+        font-size:14px !important;
+    }
+}
+.btn-warning:not([disabled]):not(.disabled).active, .btn-warning:not([disabled]):not(.disabled):active, .show>.btn-warning.dropdown-toggle{
+    background-color:lighten($orange, 10%);border-color:lighten($orange, 10%);
+    box-shadow:none; color:$white;
+}
+
+.btn-light-green{
+    background-color:$light-green;border-color:$light-green;font-size: 15px;
+    color:$white;position:relative;text-transform:uppercase; font-family:$font-Quicksand-Med;
+    letter-spacing:1px;
+    &:hover,&:active,&:focus,&.active,&.focus,&.active:focus,&.active:hover,&.focus:active,&:active:focus,&:active:hover{
+        background-color:lighten($light-green, 10%);border-color:lighten($light-green, 10%);
+        box-shadow:none;color:$white;
+    }
+    @include media-breakpoint-down(sm){
+        font-size:14px !important;
+    }
+}
+.btn-light-green:not([disabled]):not(.disabled).active, .btn-light-green:not([disabled]):not(.disabled):active, .show>.btn-light-green.dropdown-toggle{
+    background-color:lighten($light-green, 10%);border-color:lighten($light-green, 10%);
+    box-shadow:none; color:$white;
+}
+
+.btn-dark{
+    background-color:#111111;border-radius:0;font-family:$font-Quicksand-Med;color:$white;position:relative;letter-spacing:1px;
+    text-transform:uppercase;font-size:16px;padding:10px 25px;
+    &:hover,&:active,&:focus,&.active,&.focus,&.active:focus,&.active:hover,&.focus:active,&:active:focus,&:active:hover{
+        background-color:lighten(#111111, 10%);border-color:lighten(#111111, 10%);
+        box-shadow:none;color:$white;
+    }
+    @include media-breakpoint-down(sm){
+        font-size:14px ;
+    }
+}
+
+.btn-dark:not([disabled]):not(.disabled).active, .btn-dark:not([disabled]):not(.disabled):active, .show>.btn-dark.dropdown-toggle{
+    background-color:lighten(#111111, 10%);border-color:lighten(#111111, 10%);
+    box-shadow:none; color:$white;
+}
+
+.btn-outline-success{
+    border-color: $light-green;color:$light-green;border-radius:2px;font-family:$font-Quicksand-Med;
+    &.btn-sm{
+        padding:5px 20px;
+    }
+    &:hover{
+        background-color:$light-green;border-color:$light-green;
+    }
+}
+.btn-outline-success:not([disabled]):not(.disabled).active, .btn-outline-success:not([disabled]):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle{
+    background-color:lighten($light-green, 10%);border-color:lighten($light-green, 10%);
+    box-shadow:none;
+}
+
+
+.load-more{
+    &:hover,&:active,&:focus,&.active,&.focus,&.active:focus,&.active:hover,&.focus:active,&:active:focus,&:active:hover{
+        box-shadow:none !important;
+    }
+}
+
+.bg-dark{
+     background-color:#111111 !important; 
+    &:after{
+        background-color:#111111;
+    }
+    &:hover{
+        background-color:lighten(#111111, 10%);border-color:lighten(#111111, 10%); 
+    }
+}
+.bg-primary{
+    background-color:$green !important;
+    &:after{
+        background-color:$green;
+    }
+    &:hover{
+        background-color:lighten($green, 10%);border-color:lighten($green, 10%);
+    }
+}
+.form-group{
+    margin-bottom: 1.5rem;
+    label{
+        color:#797979;
+    }
+    
+    @include media-breakpoint-down(sm){
+        margin-bottom:.8rem;
+        label{
+            font-size:14px;
+        }
+    }
+}
+
+.form-control{
+    border-color:#E4E4E4;border-radius:0;height:50px;font-family: $font-Quicksand-Med;
+    &:focus{
+        border:1px solid $light-gray;box-shadow:none;
+    }
+    &.datepicker{
+        background-image:url('#{$imageurl}/calender-ic.png');background-repeat:no-repeat;background-position:calc(100% - 15px);padding-right:50px;
+    }
+    @include media-breakpoint-down(sm){
+        height:40px;font-size:14px;
+    }
+}
+textarea.form-control{
+    height: auto !important; resize: none;
+}

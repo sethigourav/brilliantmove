@@ -1,0 +1,123 @@
+.price-page {
+    .page-content {
+        .custom_card{
+            .card-header{
+                .bootstrap-select {
+                    // &:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+                    //     width: 338px;
+                    // }
+                    width:338px;
+                    // .dropdown-toggle{
+                    //     height: 50px;font-size:18px;
+                    //     .filter-option{
+                    //         position: relative;top:3px;color: #202020;
+                    //     }
+                    // }
+                }
+            }
+
+            //Price Table
+            .pricesec-table{
+                .table{
+                    thead{
+                        tr{
+                            th{
+                                font-family:$font-Quicksand-Bold;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                &:nth-child(3){
+                                    border-right: 1px solid #e9ecef;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //Price View Table
+            .priceview-table{
+                .table{
+                    thead{
+                        tr{
+                            th{
+                                font-family:$font-Quicksand-Bold;vertical-align: top;
+                                ul{
+                                    margin-bottom: 0px;margin-top:15px;
+                                    li{
+                                        &:not(:last-child){
+                                            border-right: 1px solid #c8c8c8;padding-right:15px;margin-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                text-align: center;white-space:nowrap;
+                                ul{
+                                    margin-bottom: 0px;
+                                    li{
+                                        margin-right: 0px;
+                                        &:not(:last-child){
+                                            border-right: 1px solid #c8c8c8;padding-right:15px;margin-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include media-breakpoint-between(md, lg){
+                .card-header{
+                    .bootstrap-select{
+                        width: 280px;
+                        // .dropdown-toggle{
+                        //     height:45px;font-size:16px;
+                        // }
+                        // .dropdown-menu{
+                        //     li{
+                        //         a{
+                        //             font-size:16px;
+                        //         }
+                        //     }
+                        // }
+                    }
+                }
+            }
+            @include media-breakpoint-down(sm){
+                .card-header{
+                    .page-title{
+                        margin-top:10px;
+                    }
+                    .bootstrap-select{
+                        width:250px;
+                        // .dropdown-toggle{
+                        //     height:40px;font-size:15px;
+                        // }
+                        // .dropdown-menu{
+                        //     li{
+                        //         a{
+                        //             font-size:15px;
+                        //         }
+                        //     }
+                        // }
+                    }
+                }
+            }
+            @include media-breakpoint-down(xs){
+                .card-header{
+                    .bootstrap-select{
+                        width:150px;
+                    }
+                }
+            }
+        }
+    }
+}

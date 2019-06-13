@@ -1,0 +1,135 @@
+.myprofile_page{
+    .card-body{
+        // min-height: 650px;
+    }
+    .profile_view{
+        .profileimg{
+            position:relative;display:inline-block;
+            .avtar{
+                padding:8px;width:160px;height:160px;
+                display:block;background-color:#f8f8f8;border:none;
+            }
+            .edit_icon{
+                background-color:#f8f8f8;width:40px;height:40px;
+                position:absolute;bottom: 14px; right: -23px; text-align: center;
+                margin-bottom: 0; line-height: 34px;cursor:pointer;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+        .view{
+            ul{
+                margin-bottom: 30px;
+                li{
+                    display: table;margin-bottom:15px;
+                    label{
+                        font-size:20px;color:#454444 ;
+                        width:200px;display:table-cell;
+                        font-family: $font-Quicksand-Med;
+                        em{
+                            font-style: normal;float:right
+                        }
+                    }
+                    span{
+                        font-size:18px;color:#818181;display:table-cell;
+                        font-family: $font-Quicksand-Reg;padding-left:60px;
+                    }
+                }
+            }
+            
+        }
+    }
+    @media(min-width: 768px) and (max-width: 1449px) {
+        .profile_view{
+            .view{
+                ul{
+                   
+                    li{
+                        
+                        label{
+                                font-size:16px;
+                        }
+                    }
+                }
+                
+            }
+            .btn-warning{
+                 font-size:15px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md) {
+        .card-body{
+                min-height:auto;padding:15px 10px 20px;
+            }
+        }
+    @include media-breakpoint-down(sm) {
+
+        .profile_view{
+
+            .profileimg{
+                .avtar{
+                    width:130px;height:130px;
+                }
+                .edit_icon{
+                    width:38px;height: 38px;
+                    img{
+                        width:16px;
+                    }
+                }
+            }
+            .view{
+                ul{
+                    li{
+                        
+                        label{
+                                font-size:14px;white-space:nowrap;width:150px;
+                        }
+                        span{
+                                font-size:13px;word-break: break-all;padding-left:30px;
+                        }
+                    }
+                }
+                
+            }
+            .btn-warning{
+                 font-size:14px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        
+        .profile_view{
+            .profileimg{
+                .avtar{
+                    width:130px;height:130px;
+                }
+                .edit_icon{
+                    width:38px;height: 38px;
+                    img{
+                        width:16px;
+                    }
+                }
+            }            
+            .view{
+                ul{
+                    margin-bottom:15px;
+                    li{
+                        
+                        label{
+                                width:120px;
+                        }
+                        span{
+                             padding-left:15px;   
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+

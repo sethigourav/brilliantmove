@@ -1,0 +1,85 @@
+.myprofile_page{
+    .profile_view{
+        .profileimg{
+            position:relative;display:inline-block;
+            .avtar{
+                padding:8px;width:160px;height:160px;
+                display:block;background-color:#f8f8f8;border:none;
+            }
+            .edit_icon{
+                background-color:#f8f8f8;width:40px;height:40px;
+                position:absolute;bottom: 14px; right: 0; text-align: center;
+                margin-bottom: 0; line-height: 34px;cursor:pointer;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+        .view{
+            ul{
+                margin-bottom: 30px;
+                li{
+                    display: table;margin-bottom:15px;
+                    label{
+                        color:#454444 ;
+                        width:200px;display:table-cell;
+                        font-family: $font-Quicksand-Med;
+                        em{
+                            font-style: normal;float:right
+                        }
+                    }
+                    span{
+                        color:#818181;display:table-cell;
+                        font-family: $font-Quicksand-Reg;padding-left:60px;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+        .profile_view{
+            .view{
+                ul{
+                   
+                    li{
+                        
+                        label{
+                                font-size:14px;white-space:nowrap;width:150px;
+                        }
+                        span{
+                                font-size:13px;word-break: break-all;padding-left:30px;
+                        }
+                    }
+                }
+                
+            }
+            .btn-warning{
+                 font-size:14px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        .profile_view{            
+            .view{
+                ul{
+                   
+                    li{
+                        
+                        label{
+                                width:120px;
+                        }
+                        span{
+                             padding-left:15px;   
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+

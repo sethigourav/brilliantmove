@@ -1,0 +1,37 @@
+.error_page {
+    .error_section {
+        .error_content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            width: 100%;
+            h2 {
+                font-size: 220px;
+                font-family: $font-Roboto-Bold;
+                line-height: 175px;
+            }
+            p {
+                font-size: 18px;
+                font-family: $font-Quicksand-Reg;
+                margin: 20px 0;
+            }
+            .btn-error {
+                padding: 10px 25px;
+            }
+            @include media-breakpoint-down(sm) {
+                h2 {
+                    font-size: 130px;
+                    line-height: 96px;
+                }
+                p {
+                    font-size: 15px;
+                }
+                .btn-error {
+                    padding: 5px 15px;
+                }
+            }
+        }
+    }
+}

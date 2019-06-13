@@ -1,0 +1,59 @@
+.payment-history-page {
+    .page-content {
+        .custom_card{
+            .payment-history{
+                .table{
+                    border-bottom: 1px solid #e9ecef;
+                    .form-check-inline{
+                        margin:0;display: flex;
+                        .custom-control{
+                            margin: 0;color: #212121;
+                            .custom-control-indicator{
+                                left: auto;right: 0;height: 19px;width: 19px;border: 1px solid #EAEAEA;top: 5px;
+                                background-color: $white;border-radius: 2px; box-shadow: none;
+                                    &:focus{
+                                        outline:0px !important;
+                                    }  
+                            }
+                            .custom-control-input{
+                                &:checked{
+                                    ~.custom-control-indicator{
+                                        background-color: $light-green;box-shadow: none;border: none;
+                                        background-image:none;
+                                    }
+                                }
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                white-space: nowrap;
+                                ul{
+                                    li{
+                                        vertical-align: middle;margin-right:0px;
+                                        &:not(:last-child){
+                                            margin-right: 0;
+                                        }
+                                        a.btn-later{
+                                            color: $white;
+                                        }
+                                        a.btn-outline-success{
+                                            margin-left: 40px;color:$light-green;
+                                            &:hover{
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

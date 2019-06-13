@@ -1,0 +1,170 @@
+.faq {
+	padding: 50px 0;
+	
+    .banner-inner-sec {
+        &.faq-bg {
+            background: url("#{$imageurl}/faq-banner.jpg");
+        }
+        &:after{
+            background: rgba(0,0,0,0.6);
+        }
+    }
+	.common_heading{
+		margin-bottom: 30px;
+         @include media-breakpoint-down(md) {
+            margin-bottom: 25px;
+         }
+         @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+         }
+	}
+    .faq_sec {
+        .accordian_sec {
+            background-color: #f9f8f7;
+            @include box-shadow(2px,0,12px,4px,
+            rgba(150, 150, 150, 0.1));
+            .card {
+                margin: 0 0 20px;
+                border: none;
+                border-radius: 0;
+                background-color: transparent;
+                .card-header {
+                    border: none;
+                    border-radius: 0;
+                    padding: 0;
+                    background-color: transparent;
+                    h4 {
+                        font-size: 20px;
+                        font-weight: normal;
+                        margin: 0;
+                        a {
+                            color: #404040;
+                            display: block;
+                            position: relative;
+                            padding: 23px 80px 23px 23px;
+                            background-color: #fffffe;
+                            border-left: 2px solid $blue;
+                            @include box-shadow(3px,
+                            0,
+                            4px,
+                            rgba(154, 153, 153, 0.11));
+                            &:focus {
+                                @include box-shadow(3px,
+                                0,
+                                4px,
+                                rgba(154, 153, 153, 0.11) !important);
+                            }
+                            &:after {
+                                position: absolute;
+                                width: 42px;
+                                height: 42px;
+                                transform: translateY(-50%);
+                                top: 50%;
+                                right: 25px;
+                                content: "\e61a";
+                                font-family: 'themify';
+                                font-style: normal;
+                                background-color: $orange;
+                                color: #fff;
+                                text-align: center;
+                                line-height: 42px;
+                                border-radius: 3px;
+                            }                            
+                        }
+                        a[aria-expanded="true"] {
+                                border-left: 2px solid $orange;
+                                &:after {
+                                    content: "\e622";
+                                }
+                            }
+                    }
+                }
+                .card-block {
+                    padding: 30px 80px 30px 23px;
+                    font-size: 18px;
+                    color: #5f5e5e;
+                    line-height: 1.65;
+                }
+            }
+        }
+        @include media-breakpoint-down(lg) {
+            .accordian_sec {
+                .card  {
+                    .card-header{
+                    h4 {
+                        font-size: 17px;
+                        a {
+                            padding: 20px 55px 20px 15px;
+                            &:after {
+                                width: 30px;
+                                height: 30px;
+                                right: 15px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                }
+                    .card-block {
+                        padding: 20px 50px 20px 15px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(md) {
+            .accordian_sec {
+                .card {
+                    .card-header{
+                    h4 {
+                        font-size: 16px;
+                        a {
+                            padding-top: 16px;
+                            padding-bottom: 16px;
+                        }
+                    }
+                }
+                    .card-block {
+                        padding-right: 16px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(xs) {
+            .accordian_sec {
+                .card {
+                    .card-header{
+                    h4 {
+                        font-size: 14px;
+                        line-height: 1.35;
+                        a {
+                            padding: 10px 40px 10px 10px;
+                            &:after {
+                                width: 23px;
+                                height: 23px;
+                                right: 10px;
+                                line-height: 23px;
+                            }
+                        }
+                    }
+                }
+                    .card-block {
+                        padding: 10px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+	
+	@media(max-width:1440px){
+		padding: 30px 0; 
+		.faq_sec {
+			.accordian_sec {
+				.card{
+					margin: 0 0 10px;
+				}
+			}
+		}
+	}
+}

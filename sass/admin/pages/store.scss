@@ -1,0 +1,114 @@
+.store-page {
+    .branchs_list {
+        max-height: 490px;
+
+        .mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            background-color: $orange !important;
+            width: 4px;
+        }
+
+        .mCS-minimal.mCSB_scrollTools .mCSB_draggerRail,
+        .mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail {
+            background-color: rgba($orange, 0.5) !important;
+        }
+
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            background-color: $orange !important;
+
+            &.mCSB_dragger_onDrag {
+                .mCSB_dragger_bar {
+                    background-color: $orange;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $orange;
+            }
+        }
+
+        .mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+        .mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+            background-color: $orange;
+        }
+
+    }
+}
+
+.store_details {
+    .card {
+        &.custom_card {
+            .card-header {
+                padding: 15px 0;
+                .complaint_details-header{
+                    font-size: 20px;
+                    font-family: $font-Quicksand-Bold;
+                    @include media-breakpoint-down(sm) {
+                        font-size: 16px;
+                    }
+                }
+                ul {
+                    &.filtericon {
+                        .btn {
+                            border-radius: 5px;
+                            font-size: 14px;
+                            margin-top: 5px;
+                            @include media-breakpoint-down(sm) {
+                                &.btn-warning {
+                                    font-size: 12px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .corporation_details_action{
+                .list-inline-item {
+                    &:not(:last-child){
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+.store_list_page{
+    .page-content {
+        .custom_card {
+            .services-sectable {
+                .table {
+                    tbody {
+                        tr {
+                            td{
+                                >a{
+                                    color: $orange;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.modal{
+    &.add_store_modal{
+        .add_branch{
+            border-top: 1px solid #e9ecef;
+            padding: 20px 0 0;
+            margin-top: 10px;
+            .sub_title{
+                font-size: 18px;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+       &.add_store_modal {
+            .add_branch {
+                .sub_title{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

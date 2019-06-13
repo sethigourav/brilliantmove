@@ -1,0 +1,96 @@
+@mixin appearance() { 
+    appearance:none; 
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;    
+}
+@mixin no-outline() {
+    outline:none;
+    -moz-outline:none;
+    -webkit-outline:none;
+    -ms-outline:none;
+    -o-outline:none;    
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+    -o-box-shadow:$top $left $blur $color #{$inset};
+    -ms-box-shadow:$top $left $blur $color #{$inset};
+    -webkit-box-shadow:$top $left $blur $color #{$inset};
+    -moz-box-shadow:$top $left $blur $color #{$inset};
+    box-shadow:$top $left $blur $color #{$inset};
+}
+@mixin border-all($width, $style, $color){
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+@mixin text-shadow($top, $left, $blur, $color, $inset:"") {
+    -o-text-shadow:$top $left $blur $color #{$inset};
+    -ms-text-shadow:$top $left $blur $color #{$inset};
+    -webkit-text-shadow:$top $left $blur $color #{$inset};
+    -moz-text-shadow:$top $left $blur $color #{$inset};
+    text-shadow:$top $left $blur $color #{$inset};
+}
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin placeholder{
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@mixin border($style, $color, $sides) {
+    @if ($style != "") {
+
+        @if ($sides == "") {
+            border: $style $color;
+
+        } @else {
+            @each $side in $sides {
+                @if ($side == 'top' or
+                $side == 'right' or
+                $side == 'bottom' or
+                $side == 'left') {
+
+                    border-#{$side}: $style $color;
+                }
+            }
+        }  
+
+    }
+}
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+//font family
+ @mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    @if $asset-pipeline == true {
+      src: font-url('#{$file-path}.eot');
+      src: font-url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
+           font-url('#{$file-path}.woff')                format('woff'),
+           font-url('#{$file-path}.ttf')                 format('truetype'),
+           font-url('#{$file-path}.svg##{$font-family}') format('svg');
+    } @else {
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
+           url('#{$file-path}.woff')                     format('woff'),
+           url('#{$file-path}.ttf')                      format('truetype'),
+           url('#{$file-path}.svg##{$font-family}')      format('svg');
+    }
+  }
+}
