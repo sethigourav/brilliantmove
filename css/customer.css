@@ -1,0 +1,280 @@
+
+/*My Custom CSS 18-06-2019*/
+
+/*Customer Section*/
+
+section.our-wrk-flow-sec {
+    padding-top: 50px !important;
+    padding-bottom: 75px !important;
+}
+
+.col-md-6.right-content-area {
+	padding-top: 50px !important;	
+    padding-left: 35px !important;
+}
+
+.col-md-6.right-content-area h2 {
+    font-size: 30px !important;
+    color: #000 !important;
+    font-weight: 600;
+}
+
+.col-md-6.right-content-area p {
+    padding-top: 15px !important;
+    font-size: 15px !important;
+    font-weight: 400;
+    color: #333 !important;
+	padding-left: 0px !important;    
+}
+
+/*Customer Section ends here*/
+
+/*Services Section*/
+
+
+.col-lg-6.left-hwdt h2 {
+    position: relative;
+    font-size: 28px !important;
+    text-transform: uppercase;
+    color: #ff9021;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.col-lg-6.left-hwdt h2:after {
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 2px;
+    background: #ff9021;
+    left: 0;
+    bottom: 0;
+}
+
+.col-lg-6.left-hwdt .desc {
+    padding-top: 10px;
+    color: #333 !important;
+    line-height: 24px;
+    padding-left: 0px !important;   
+    text-transform: uppercase;    
+}
+
+.col-lg-6.left-hwdt .content-boxes {
+    position: relative;
+}
+
+.col-lg-6.left-hwdt .content-boxes img {
+    position: absolute;
+}
+
+.col-lg-6.left-hwdt .content-boxes h4 {
+    padding-left: 70px;
+}
+
+.col-lg-6.left-hwdt .content-boxes p {
+    padding-left: 70px;
+    font-size: 14.5px !important;
+    font-weight: 300;
+    /*color: #444;*/
+    padding-bottom: 10px;    
+}
+
+.col-lg-6.left-hwdt .content-boxes h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
+/*Services Section ends here*/
+
+/*Reasons to choose us*/
+
+.col-md-12.text-center.rtcu-head h2 {
+    text-transform: uppercase;
+    font-size: 28px !important;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section.reason-to-choose-us {
+    padding-top: 70px !important;
+}
+
+.col-md-12.text-center.rtcu-head h2:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: #f37021;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.col-md-12.text-center.rtcu-head h2:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 88px;
+    background: transparent;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-left: 12px solid #f37021;
+    border-right: 12px solid #f37021;
+}
+
+.col-md-12.text-center.rtcu-head p {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+/*Reasons to choose us ends here*/
+
+/*Reasons to choose us sub sections*/
+
+section.services-section {
+    padding-top: 25px;
+}
+
+.services-boxes-inner {
+    border: 1px solid #d7dddf;
+    border-radius: 3px;
+    min-height: 310px;  
+    margin-bottom: 40px;  
+}
+
+.services-boxes-inner img {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0px;
+	width: 80px;    
+}
+
+.services-boxes-inner h3 {
+    text-align: center;
+    font-size: 18px !important;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.services-boxes-inner p {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/*.container-fluid.lsbxs {
+    background-repeat: no-repeat;
+    min-height: 350px;
+    margin-top: 20px;
+}*/
+
+section.last-service-boxes {
+    padding-top: 10px;
+    padding-bottom: 45px;
+}
+
+.col-sm-9.lst-boxes {
+    margin-left: 300px;
+}
+
+.lst-srv-boxes-sec img {
+    width: 80px;
+    position: absolute;
+}
+
+.lst-srv-boxes-sec h3 {
+    padding-left: 95px;
+    font-size: 18px !important;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.lst-srv-boxes-sec p {
+    padding-left: 95px;
+    padding-bottom: 25px;
+}
+
+.container-fluid.lsbxs {
+    padding-left: 0px !important;
+}
+
+.col-md-4.lsb-img {
+    padding-left: 0px !important;
+}
+
+
+
+/*Reasons to choose us sub sections ends here*/
+
+/*Responsive*/
+
+@media (max-width: 1200px){
+	.services-boxes-inner {
+    	min-height: 360px;
+	}
+}
+
+@media (max-width: 980px){
+	.container-fluid.lsbxs {
+    	background-size: cover;
+    	width: 100%;
+	}
+}
+
+@media (max-width: 767px){
+	.col-md-6.right-content-area {
+    	padding-top: 10px !important;
+    	padding-left: 15px !important;
+	}
+	section.our-wrk-flow-sec {
+    	padding-top: 50px !important;
+    	padding-bottom: 40px !important;
+	}
+	.services-boxes-inner {
+    	min-height: 1px;
+	}
+	.services-boxes-inner p {
+    	padding-bottom: 20px !important;
+	}
+	.col-md-6.col-sm-12.lsb-content {
+    	padding-top: 20px;
+    	padding-left: 30px;
+	}
+	.col-md-4.lsb-img {
+    	padding-left: 0px !important;
+    	padding-right: 0px !important;
+	}
+	.lst-srv-boxes-sec {
+    border: 1px solid #d7dddf;
+    margin-bottom: 40px;
+    border-radius: 3px;
+}
+
+.lst-srv-boxes-sec img {
+    position: initial;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
+.lst-srv-boxes-sec h3 {
+    padding-left: 0px;
+    text-align: center;
+}
+
+.lst-srv-boxes-sec p {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-left: 0px;
+}	
+}
