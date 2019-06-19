@@ -286,6 +286,11 @@ section.last-service-boxes {
     padding-left: 0px !important;
 }
 
+.dis_p{
+    font-size: 18px !important;
+    font-weight: 600;
+}
+
 
 /*Reasons to choose us sub sections ends here*/
 
@@ -357,7 +362,7 @@ section.testimonial_sec {
 
 .testimonial_inner_sec p {
     text-align: center;
-    max-width: 70%;
+    max-width: 90%;
     margin: 0 auto;
     padding: 10px 0px;
 }
@@ -416,9 +421,31 @@ section.testimonial_slider {
 background: #f37021;
 }
 
-
-
 /*Testimonial Slider ends here*/
+
+/*Load more button*/
+
+p.load_more_spacer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+a.load_more_btn {
+    background: #F37021;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+a.load_more_btn:hover {
+    background: #1f1f1f;
+}
+
+/*Load more button ends here*/
 
 /*Responsive*/
 
@@ -512,10 +539,6 @@ background: #f37021;
     	margin: 0 auto;
     	padding-left: 0px;
 	}
-
-    .testimonial_inner_sec p {
-        width:95%;   
-    }
 	section.last-service-boxes{
 		padding-bottom: 5px !important;
 	}
